@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Fee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Parking Fee Calculator</h1>
+
+<label for="parkingType">Choose Parking Type:</label>
+<select id="parkingType">
+    <option value="firstTimeCar">First Time Car Parking</option>
+    <option value="secondTimeCar">Second Time and Onward Car Parking</option>
+    <option value="firstTimeVan">First Time Van/Lorry Parking</option>
+    <option value="secondTimeVan">Second Time and Onward Van/Lorry Parking</option>
+    <option value="agentCar">Agent Car Parking</option>
+    <option value="residentCharging">Resident Car Battery Charging</option>
+    <option value="visitorCharging">Visitor Car Battery Charging</option>
+</select>
+
+<label for="entryTime">Entry Time (HH:MM): </label>
+<input type="time" id="entryTime" required><br>
+
+<label for="exitTime">Exit Time (HH:MM): </label>
+<input type="time" id="exitTime" required><br>
+
+<button onclick="calculateParkingFee()">Calculate Fee</button>
+
+<h2 id="result"></h2>
+
+<script src="script.js"></script>
+</body>
+</html>
