@@ -34,28 +34,28 @@ function calculateFee(parkingType, minutes) {
             } else {
                 const chargeableMinutes = minutes - 30;
                 const chargeableHours = Math.ceil(chargeableMinutes / 60);
-                return chargeableHours * 20; // $20 per hour
+                return chargeableHours * 25; // $25 per hour
             }
         case 'secondTimeCar':
             const chargeableMinutesCar = minutes;
             const chargeableHoursCar = Math.ceil(chargeableMinutesCar / 60);
-            return chargeableHoursCar * 20; // $20 per hour
+            return chargeableHoursCar * 25; // $25 per hour
         case 'firstTimeVan':
             if (minutes <= 20) {
                 return 0; // First 20 minutes free
             } else {
                 const chargeableMinutesVan = minutes - 20;
                 const chargeableHoursVan = Math.ceil(chargeableMinutesVan / 60);
-                return chargeableHoursVan * 30; // $30 per hour
+                return chargeableHoursVan * 35; // $35 per hour
             }
         case 'secondTimeVan':
             const chargeableMinutesV = minutes;
             const chargeableHoursV = Math.ceil(chargeableMinutesV / 60);
-            return chargeableHoursV * 30; // $30 per hour
+            return chargeableHoursV * 35; // $35 per hour
         case 'agentCar':
             const chargeableMinutesAgent = minutes;
             const chargeableHoursAgent = Math.ceil(chargeableMinutesAgent / 60);
-            return chargeableHoursAgent * 20; // $20 per hour
+            return chargeableHoursAgent * 25; // $25 per hour
         case 'residentCharging':
             const chargeableMinutesResident = minutes;
             const chargeableHoursResident = Math.ceil(chargeableMinutesResident / 60);
